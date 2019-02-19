@@ -10,6 +10,22 @@
 		1CC63041221C11230092AF33 /* PayseraMokejimaiSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CC63037221C11230092AF33 /* PayseraMokejimaiSDK.framework */; };
 		1CC63046221C11230092AF33 /* PayseraMokejimaiSDKTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CC63045221C11230092AF33 /* PayseraMokejimaiSDKTests.swift */; };
 		1CC63048221C11230092AF33 /* PayseraMokejimaiSDK.h in Headers */ = {isa = PBXBuildFile; fileRef = 1CC6303A221C11230092AF33 /* PayseraMokejimaiSDK.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1CC63062221C11880092AF33 /* MokejimaiApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CC6305C221C11880092AF33 /* MokejimaiApiClient.swift */; };
+		1CC63063221C11880092AF33 /* MokejimaiRequestAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CC6305D221C11880092AF33 /* MokejimaiRequestAdapter.swift */; };
+		1CC63064221C11880092AF33 /* MokejimaiApiClientFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CC6305E221C11880092AF33 /* MokejimaiApiClientFactory.swift */; };
+		1CC63065221C11880092AF33 /* MokejimaiApiRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CC6305F221C11880092AF33 /* MokejimaiApiRequest.swift */; };
+		1CC63066221C11880092AF33 /* MokejimaiApiCredentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CC63061221C11880092AF33 /* MokejimaiApiCredentials.swift */; };
+		1CC63068221C11910092AF33 /* MokejimaiApiRequestRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CC63067221C11910092AF33 /* MokejimaiApiRequestRouter.swift */; };
+		1CC6306E221C11D20092AF33 /* JWTDecode.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CC6306A221C11D20092AF33 /* JWTDecode.framework */; };
+		1CC6306F221C11D20092AF33 /* ObjectMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CC6306B221C11D20092AF33 /* ObjectMapper.framework */; };
+		1CC63070221C11D20092AF33 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CC6306C221C11D20092AF33 /* Alamofire.framework */; };
+		1CC63071221C11D20092AF33 /* PromiseKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CC6306D221C11D20092AF33 /* PromiseKit.framework */; };
+		1CC63073221C13D40092AF33 /* TokenRefresherProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CC63072221C13D40092AF33 /* TokenRefresherProtocol.swift */; };
+		1CC63075221C14BD0092AF33 /* PSMokejimaiApiError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CC63074221C14BD0092AF33 /* PSMokejimaiApiError.swift */; };
+		1CC63077221C16D20092AF33 /* PSMetadataAwareResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CC63076221C16D20092AF33 /* PSMetadataAwareResponse.swift */; };
+		1CC6307A221C17080092AF33 /* PSMetadata.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CC63079221C17080092AF33 /* PSMetadata.swift */; };
+		1CC6307D221C17580092AF33 /* PSManualTransfer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CC6307C221C17580092AF33 /* PSManualTransfer.swift */; };
+		1CC6307F221C17940092AF33 /* PSMoney.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CC6307E221C17940092AF33 /* PSMoney.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +45,22 @@
 		1CC63040221C11230092AF33 /* PayseraMokejimaiSDKTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PayseraMokejimaiSDKTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1CC63045221C11230092AF33 /* PayseraMokejimaiSDKTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayseraMokejimaiSDKTests.swift; sourceTree = "<group>"; };
 		1CC63047221C11230092AF33 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1CC6305C221C11880092AF33 /* MokejimaiApiClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MokejimaiApiClient.swift; sourceTree = "<group>"; };
+		1CC6305D221C11880092AF33 /* MokejimaiRequestAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MokejimaiRequestAdapter.swift; sourceTree = "<group>"; };
+		1CC6305E221C11880092AF33 /* MokejimaiApiClientFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MokejimaiApiClientFactory.swift; sourceTree = "<group>"; };
+		1CC6305F221C11880092AF33 /* MokejimaiApiRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MokejimaiApiRequest.swift; sourceTree = "<group>"; };
+		1CC63061221C11880092AF33 /* MokejimaiApiCredentials.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MokejimaiApiCredentials.swift; sourceTree = "<group>"; };
+		1CC63067221C11910092AF33 /* MokejimaiApiRequestRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MokejimaiApiRequestRouter.swift; path = ../../PayseraTopUpSDK/PayseraTopUpSDK/MokejimaiApiRequestRouter.swift; sourceTree = "<group>"; };
+		1CC6306A221C11D20092AF33 /* JWTDecode.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JWTDecode.framework; path = Carthage/Build/iOS/JWTDecode.framework; sourceTree = "<group>"; };
+		1CC6306B221C11D20092AF33 /* ObjectMapper.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ObjectMapper.framework; path = Carthage/Build/iOS/ObjectMapper.framework; sourceTree = "<group>"; };
+		1CC6306C221C11D20092AF33 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
+		1CC6306D221C11D20092AF33 /* PromiseKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PromiseKit.framework; path = Carthage/Build/iOS/PromiseKit.framework; sourceTree = "<group>"; };
+		1CC63072221C13D40092AF33 /* TokenRefresherProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenRefresherProtocol.swift; sourceTree = "<group>"; };
+		1CC63074221C14BD0092AF33 /* PSMokejimaiApiError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PSMokejimaiApiError.swift; sourceTree = "<group>"; };
+		1CC63076221C16D20092AF33 /* PSMetadataAwareResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PSMetadataAwareResponse.swift; sourceTree = "<group>"; };
+		1CC63079221C17080092AF33 /* PSMetadata.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PSMetadata.swift; sourceTree = "<group>"; };
+		1CC6307C221C17580092AF33 /* PSManualTransfer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PSManualTransfer.swift; sourceTree = "<group>"; };
+		1CC6307E221C17940092AF33 /* PSMoney.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PSMoney.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,6 +68,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1CC6306F221C11D20092AF33 /* ObjectMapper.framework in Frameworks */,
+				1CC63070221C11D20092AF33 /* Alamofire.framework in Frameworks */,
+				1CC6306E221C11D20092AF33 /* JWTDecode.framework in Frameworks */,
+				1CC63071221C11D20092AF33 /* PromiseKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -53,6 +89,7 @@
 		1CC6302D221C11230092AF33 = {
 			isa = PBXGroup;
 			children = (
+				1CC63069221C11BC0092AF33 /* Carthage */,
 				1CC63039221C11230092AF33 /* PayseraMokejimaiSDK */,
 				1CC63044221C11230092AF33 /* PayseraMokejimaiSDKTests */,
 				1CC63038221C11230092AF33 /* Products */,
@@ -71,6 +108,9 @@
 		1CC63039221C11230092AF33 /* PayseraMokejimaiSDK */ = {
 			isa = PBXGroup;
 			children = (
+				1CC63060221C11880092AF33 /* Entities */,
+				1CC6305B221C11880092AF33 /* Services */,
+				1CC63067221C11910092AF33 /* MokejimaiApiRequestRouter.swift */,
 				1CC6303A221C11230092AF33 /* PayseraMokejimaiSDK.h */,
 				1CC6303B221C11230092AF33 /* Info.plist */,
 			);
@@ -84,6 +124,58 @@
 				1CC63047221C11230092AF33 /* Info.plist */,
 			);
 			path = PayseraMokejimaiSDKTests;
+			sourceTree = "<group>";
+		};
+		1CC6305B221C11880092AF33 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				1CC6305C221C11880092AF33 /* MokejimaiApiClient.swift */,
+				1CC6305D221C11880092AF33 /* MokejimaiRequestAdapter.swift */,
+				1CC6305E221C11880092AF33 /* MokejimaiApiClientFactory.swift */,
+				1CC6305F221C11880092AF33 /* MokejimaiApiRequest.swift */,
+				1CC63072221C13D40092AF33 /* TokenRefresherProtocol.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		1CC63060221C11880092AF33 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				1CC6307B221C17300092AF33 /* Transfer */,
+				1CC63078221C16F00092AF33 /* Common */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		1CC63069221C11BC0092AF33 /* Carthage */ = {
+			isa = PBXGroup;
+			children = (
+				1CC6306C221C11D20092AF33 /* Alamofire.framework */,
+				1CC6306A221C11D20092AF33 /* JWTDecode.framework */,
+				1CC6306B221C11D20092AF33 /* ObjectMapper.framework */,
+				1CC6306D221C11D20092AF33 /* PromiseKit.framework */,
+			);
+			name = Carthage;
+			sourceTree = "<group>";
+		};
+		1CC63078221C16F00092AF33 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				1CC63061221C11880092AF33 /* MokejimaiApiCredentials.swift */,
+				1CC63074221C14BD0092AF33 /* PSMokejimaiApiError.swift */,
+				1CC63076221C16D20092AF33 /* PSMetadataAwareResponse.swift */,
+				1CC63079221C17080092AF33 /* PSMetadata.swift */,
+				1CC6307E221C17940092AF33 /* PSMoney.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		1CC6307B221C17300092AF33 /* Transfer */ = {
+			isa = PBXGroup;
+			children = (
+				1CC6307C221C17580092AF33 /* PSManualTransfer.swift */,
+			);
+			path = Transfer;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -148,6 +240,7 @@
 				TargetAttributes = {
 					1CC63036221C11230092AF33 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1010;
 					};
 					1CC6303F221C11230092AF33 = {
 						CreatedOnToolsVersion = 10.1;
@@ -194,6 +287,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1CC63073221C13D40092AF33 /* TokenRefresherProtocol.swift in Sources */,
+				1CC63077221C16D20092AF33 /* PSMetadataAwareResponse.swift in Sources */,
+				1CC63075221C14BD0092AF33 /* PSMokejimaiApiError.swift in Sources */,
+				1CC6307F221C17940092AF33 /* PSMoney.swift in Sources */,
+				1CC63066221C11880092AF33 /* MokejimaiApiCredentials.swift in Sources */,
+				1CC63063221C11880092AF33 /* MokejimaiRequestAdapter.swift in Sources */,
+				1CC6307A221C17080092AF33 /* PSMetadata.swift in Sources */,
+				1CC63062221C11880092AF33 /* MokejimaiApiClient.swift in Sources */,
+				1CC63065221C11880092AF33 /* MokejimaiApiRequest.swift in Sources */,
+				1CC63068221C11910092AF33 /* MokejimaiApiRequestRouter.swift in Sources */,
+				1CC63064221C11880092AF33 /* MokejimaiApiClientFactory.swift in Sources */,
+				1CC6307D221C17580092AF33 /* PSManualTransfer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -341,6 +446,7 @@
 		1CC6304C221C11230092AF33 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -348,6 +454,10 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = PayseraMokejimaiSDK/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -358,6 +468,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.arvydasdudavicius.PayseraMokejimaiSDK;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -366,6 +477,7 @@
 		1CC6304D221C11230092AF33 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -373,6 +485,10 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = PayseraMokejimaiSDK/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -391,6 +507,7 @@
 		1CC6304F221C11230092AF33 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = EL8FMD2B3A;
 				INFOPLIST_FILE = PayseraMokejimaiSDKTests/Info.plist;
@@ -409,6 +526,7 @@
 		1CC63050221C11230092AF33 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = EL8FMD2B3A;
 				INFOPLIST_FILE = PayseraMokejimaiSDKTests/Info.plist;
