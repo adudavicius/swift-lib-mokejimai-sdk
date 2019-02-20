@@ -23,8 +23,8 @@
 		1CC6307F221C17940092AF33 /* PSMoney.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CC6307E221C17940092AF33 /* PSMoney.swift */; };
 		1CF95740221D6F38007DE4AA /* Cartfile.resolved in Resources */ = {isa = PBXBuildFile; fileRef = 1CF9573E221D6F38007DE4AA /* Cartfile.resolved */; };
 		1CF95741221D6F38007DE4AA /* Cartfile in Resources */ = {isa = PBXBuildFile; fileRef = 1CF9573F221D6F38007DE4AA /* Cartfile */; };
-		1CF95742221D6F4D007DE4AA /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1CC6303B221C11230092AF33 /* Info.plist */; };
-		1CF95743221D6F4D007DE4AA /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1CC63047221C11230092AF33 /* Info.plist */; };
+		1CF95742221D6F4D007DE4AA /* PayserMokejimaiSDKInfo.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1CC6303B221C11230092AF33 /* PayserMokejimaiSDKInfo.plist */; };
+		1CF95743221D6F4D007DE4AA /* PayseraMokejimaiSDKTests.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1CC63047221C11230092AF33 /* PayseraMokejimaiSDKTests.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,10 +40,10 @@
 /* Begin PBXFileReference section */
 		1CC63037221C11230092AF33 /* PayseraMokejimaiSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PayseraMokejimaiSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1CC6303A221C11230092AF33 /* PayseraMokejimaiSDK.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PayseraMokejimaiSDK.h; sourceTree = "<group>"; };
-		1CC6303B221C11230092AF33 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1CC6303B221C11230092AF33 /* PayserMokejimaiSDKInfo.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = PayserMokejimaiSDKInfo.plist; sourceTree = "<group>"; };
 		1CC63040221C11230092AF33 /* PayseraMokejimaiSDKTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PayseraMokejimaiSDKTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1CC63045221C11230092AF33 /* PayseraMokejimaiSDKTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayseraMokejimaiSDKTests.swift; sourceTree = "<group>"; };
-		1CC63047221C11230092AF33 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1CC63047221C11230092AF33 /* PayseraMokejimaiSDKTests.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = PayseraMokejimaiSDKTests.plist; sourceTree = "<group>"; };
 		1CC6305C221C11880092AF33 /* MokejimaiApiClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MokejimaiApiClient.swift; sourceTree = "<group>"; };
 		1CC6305D221C11880092AF33 /* MokejimaiRequestAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MokejimaiRequestAdapter.swift; sourceTree = "<group>"; };
 		1CC6305E221C11880092AF33 /* MokejimaiApiClientFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MokejimaiApiClientFactory.swift; sourceTree = "<group>"; };
@@ -111,7 +111,7 @@
 				1CC6305B221C11880092AF33 /* Services */,
 				1CC63067221C11910092AF33 /* MokejimaiApiRequestRouter.swift */,
 				1CC6303A221C11230092AF33 /* PayseraMokejimaiSDK.h */,
-				1CC6303B221C11230092AF33 /* Info.plist */,
+				1CC6303B221C11230092AF33 /* PayserMokejimaiSDKInfo.plist */,
 			);
 			path = PayseraMokejimaiSDK;
 			sourceTree = "<group>";
@@ -120,7 +120,7 @@
 			isa = PBXGroup;
 			children = (
 				1CC63045221C11230092AF33 /* PayseraMokejimaiSDKTests.swift */,
-				1CC63047221C11230092AF33 /* Info.plist */,
+				1CC63047221C11230092AF33 /* PayseraMokejimaiSDKTests.plist */,
 			);
 			path = PayseraMokejimaiSDKTests;
 			sourceTree = "<group>";
@@ -270,8 +270,8 @@
 			files = (
 				1CF95741221D6F38007DE4AA /* Cartfile in Resources */,
 				1CF95740221D6F38007DE4AA /* Cartfile.resolved in Resources */,
-				1CF95742221D6F4D007DE4AA /* Info.plist in Resources */,
-				1CF95743221D6F4D007DE4AA /* Info.plist in Resources */,
+				1CF95742221D6F4D007DE4AA /* PayserMokejimaiSDKInfo.plist in Resources */,
+				1CF95743221D6F4D007DE4AA /* PayseraMokejimaiSDKTests.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -462,7 +462,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
-				INFOPLIST_FILE = PayseraMokejimaiSDK/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/PayseraMokejimaiSDK/PayserMokejimaiSDKInfo.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -496,7 +496,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
-				INFOPLIST_FILE = PayseraMokejimaiSDK/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/PayseraMokejimaiSDK/PayserMokejimaiSDKInfo.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -517,8 +517,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = EL8FMD2B3A;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = PayseraMokejimaiSDKTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -527,6 +527,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.arvydasdudavicius.PayseraMokejimaiSDKTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -536,8 +537,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = EL8FMD2B3A;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = PayseraMokejimaiSDKTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -546,6 +547,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.arvydasdudavicius.PayseraMokejimaiSDKTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
