@@ -14,7 +14,6 @@
 		1CC63064221C11880092AF33 /* MokejimaiApiClientFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CC6305E221C11880092AF33 /* MokejimaiApiClientFactory.swift */; };
 		1CC63065221C11880092AF33 /* MokejimaiApiRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CC6305F221C11880092AF33 /* MokejimaiApiRequest.swift */; };
 		1CC63066221C11880092AF33 /* MokejimaiApiCredentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CC63061221C11880092AF33 /* MokejimaiApiCredentials.swift */; };
-		1CC63068221C11910092AF33 /* MokejimaiApiRequestRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CC63067221C11910092AF33 /* MokejimaiApiRequestRouter.swift */; };
 		1CC63073221C13D40092AF33 /* TokenRefresherProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CC63072221C13D40092AF33 /* TokenRefresherProtocol.swift */; };
 		1CC63075221C14BD0092AF33 /* PSMokejimaiApiError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CC63074221C14BD0092AF33 /* PSMokejimaiApiError.swift */; };
 		1CC63077221C16D20092AF33 /* PSMetadataAwareResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CC63076221C16D20092AF33 /* PSMetadataAwareResponse.swift */; };
@@ -25,6 +24,7 @@
 		1CF95741221D6F38007DE4AA /* Cartfile in Resources */ = {isa = PBXBuildFile; fileRef = 1CF9573F221D6F38007DE4AA /* Cartfile */; };
 		1CF95742221D6F4D007DE4AA /* PayserMokejimaiSDKInfo.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1CC6303B221C11230092AF33 /* PayserMokejimaiSDKInfo.plist */; };
 		1CF95743221D6F4D007DE4AA /* PayseraMokejimaiSDKTests.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1CC63047221C11230092AF33 /* PayseraMokejimaiSDKTests.plist */; };
+		1CF95745221D74A0007DE4AA /* MokejimaiApiRequestRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CF95744221D74A0007DE4AA /* MokejimaiApiRequestRouter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,7 +49,6 @@
 		1CC6305E221C11880092AF33 /* MokejimaiApiClientFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MokejimaiApiClientFactory.swift; sourceTree = "<group>"; };
 		1CC6305F221C11880092AF33 /* MokejimaiApiRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MokejimaiApiRequest.swift; sourceTree = "<group>"; };
 		1CC63061221C11880092AF33 /* MokejimaiApiCredentials.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MokejimaiApiCredentials.swift; sourceTree = "<group>"; };
-		1CC63067221C11910092AF33 /* MokejimaiApiRequestRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MokejimaiApiRequestRouter.swift; path = ../../PayseraTopUpSDK/PayseraTopUpSDK/MokejimaiApiRequestRouter.swift; sourceTree = "<group>"; };
 		1CC6306A221C11D20092AF33 /* JWTDecode.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JWTDecode.framework; path = Carthage/Build/iOS/JWTDecode.framework; sourceTree = "<group>"; };
 		1CC6306B221C11D20092AF33 /* ObjectMapper.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ObjectMapper.framework; path = Carthage/Build/iOS/ObjectMapper.framework; sourceTree = "<group>"; };
 		1CC6306C221C11D20092AF33 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
@@ -62,6 +61,7 @@
 		1CC6307E221C17940092AF33 /* PSMoney.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PSMoney.swift; sourceTree = "<group>"; };
 		1CF9573E221D6F38007DE4AA /* Cartfile.resolved */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Cartfile.resolved; sourceTree = "<group>"; };
 		1CF9573F221D6F38007DE4AA /* Cartfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Cartfile; sourceTree = "<group>"; };
+		1CF95744221D74A0007DE4AA /* MokejimaiApiRequestRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MokejimaiApiRequestRouter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,7 +109,7 @@
 			children = (
 				1CC63060221C11880092AF33 /* Entities */,
 				1CC6305B221C11880092AF33 /* Services */,
-				1CC63067221C11910092AF33 /* MokejimaiApiRequestRouter.swift */,
+				1CF95744221D74A0007DE4AA /* MokejimaiApiRequestRouter.swift */,
 				1CC6303A221C11230092AF33 /* PayseraMokejimaiSDK.h */,
 				1CC6303B221C11230092AF33 /* PayserMokejimaiSDKInfo.plist */,
 			);
@@ -289,6 +289,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1CF95745221D74A0007DE4AA /* MokejimaiApiRequestRouter.swift in Sources */,
 				1CC63073221C13D40092AF33 /* TokenRefresherProtocol.swift in Sources */,
 				1CC63077221C16D20092AF33 /* PSMetadataAwareResponse.swift in Sources */,
 				1CC63075221C14BD0092AF33 /* PSMokejimaiApiError.swift in Sources */,
@@ -298,7 +299,6 @@
 				1CC6307A221C17080092AF33 /* PSMetadata.swift in Sources */,
 				1CC63062221C11880092AF33 /* MokejimaiApiClient.swift in Sources */,
 				1CC63065221C11880092AF33 /* MokejimaiApiRequest.swift in Sources */,
-				1CC63068221C11910092AF33 /* MokejimaiApiRequestRouter.swift in Sources */,
 				1CC63064221C11880092AF33 /* MokejimaiApiClientFactory.swift in Sources */,
 				1CC6307D221C17580092AF33 /* PSManualTransfer.swift in Sources */,
 			);

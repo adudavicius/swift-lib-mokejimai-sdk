@@ -1,10 +1,10 @@
 import Foundation
 import Alamofire
 
-public enum TransfersApiRouter: URLRequestConvertible {
+public enum MokejimaiApiRequestRouter: URLRequestConvertible {
     
     // MARK: - GET
-    case getTransferConfiguration(locale: String)
+    case getManualTransferConfiguration()
     
     // MARK: - POST
     
@@ -15,7 +15,7 @@ public enum TransfersApiRouter: URLRequestConvertible {
     
     private var method: HTTPMethod {
         switch self {
-        case .getTransferConfiguration( _):
+        case .getManualTransferConfiguration( _):
             return .get
         }
     }
@@ -23,8 +23,8 @@ public enum TransfersApiRouter: URLRequestConvertible {
     private var path: String {
         switch self {
             
-        case .getTransferConfiguration(let locale):
-            return "/\(locale)/rest/v1/accounts/\(accountNumber)/activate"
+        case .getManualTransferConfiguration():
+            return "/manual-transfer-configuration/rest/v1/configurations"
         }
     }
     
@@ -39,7 +39,7 @@ public enum TransfersApiRouter: URLRequestConvertible {
     
     // MARK: - Method
     public func asURLRequest() throws -> URLRequest {
-        let url = try! AccountsApiRequestRouter.baseURLString.asURL()
+        let url = try! MokejimaiApiRequestRouter.baseURLString.asURL()
         
         var urlRequest = URLRequest(url: url.appendingPathComponent(path))
         urlRequest.httpMethod = method.rawValue
