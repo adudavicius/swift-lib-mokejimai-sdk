@@ -30,6 +30,16 @@ public class MokejimaiApiClient {
             .then(createPromise)
     }
     
+    public func getManualTransferConfiguration(locale: String) -> Promise<PSMetadataAwareResponse<PSManualTransfer>> {
+        let request = createRequest(.getManualTransferConfigurationWith(locale))
+        makeRequest(apiRequest: request)
+        
+        return request
+            .pendingPromise
+            .promise
+            .then(createPromise)
+    }
+    
     // MARK: - Private request methods
     private func makeRequest(apiRequest: MokejimaiApiRequest) {
         let lockQueue = DispatchQueue(label: String(describing: tokenRefresher), attributes: [])
