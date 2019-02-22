@@ -5,7 +5,6 @@ public enum MokejimaiApiRequestRouter: URLRequestConvertible {
     
     // MARK: - GET
     case getManualTransferConfiguration()
-    case getManualTransferConfigurationWith(_ locale: String)
     
     // MARK: - POST
     
@@ -16,8 +15,7 @@ public enum MokejimaiApiRequestRouter: URLRequestConvertible {
     
     private var method: HTTPMethod {
         switch self {
-        case .getManualTransferConfiguration( _),
-             .getManualTransferConfigurationWith( _):
+        case .getManualTransferConfiguration( _):
             return .get
         }
     }
@@ -27,8 +25,6 @@ public enum MokejimaiApiRequestRouter: URLRequestConvertible {
             
         case .getManualTransferConfiguration():
             return "/manual-transfer-configuration/rest/v1/configurations"
-        case .getManualTransferConfigurationWith(let locale):
-            return "/\(locale)/manual-transfer-configuration/rest/v1/configurations"
         }
     }
     

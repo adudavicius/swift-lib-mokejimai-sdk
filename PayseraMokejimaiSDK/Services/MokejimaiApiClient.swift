@@ -8,7 +8,7 @@ public class MokejimaiApiClient {
     private let sessionManager: SessionManager
     private let credentials: MokejimaiApiCredentials
     private let tokenRefresher: TokenRefresherProtocol?
-    private var requestsQueue = [MokejimaiApiRequest]()
+    private var requestsQueue = [ApiRequest]()
     
     public init(
         sessionManager: SessionManager,
@@ -21,27 +21,11 @@ public class MokejimaiApiClient {
     }
     
     public func getManualTransferConfiguration() -> Promise<PSMetadataAwareResponse<PSManualTransfer>> {
-        let request = createRequest(.getManualTransferConfiguration())
-        makeRequest(apiRequest: request)
-
-        return request
-            .pendingPromise
-            .promise
-            .then(createPromise)
-    }
-    
-    public func getManualTransferConfiguration(locale: String) -> Promise<PSMetadataAwareResponse<PSManualTransfer>> {
-        let request = createRequest(.getManualTransferConfigurationWith(locale))
-        makeRequest(apiRequest: request)
-        
-        return request
-            .pendingPromise
-            .promise
-            .then(createPromise)
+        return doRequest(requestRouter: MokejimaiApiRequestRouter.getManualTransferConfiguration())
     }
     
     // MARK: - Private request methods
-    private func makeRequest(apiRequest: MokejimaiApiRequest) {
+    private func makeRequest(apiRequest: ApiRequest) {
         let lockQueue = DispatchQueue(label: String(describing: tokenRefresher), attributes: [])
         lockQueue.sync {
             if let tokenRefresher = tokenRefresher, tokenRefresher.isRefreshing() {
@@ -94,6 +78,26 @@ public class MokejimaiApiClient {
         }
     }
     
+    private func doRequest<RC: URLRequestConvertible, E: Mappable>(requestRouter: RC) -> Promise<[E]> {
+        let request = createRequest(requestRouter)
+        makeRequest(apiRequest: request)
+        
+        return request
+            .pendingPromise
+            .promise
+            .then(createPromiseWithArrayResult)
+    }
+    
+    private func doRequest<RC: URLRequestConvertible, E: Mappable>(requestRouter: RC) -> Promise<E> {
+        let request = createRequest(requestRouter)
+        makeRequest(apiRequest: request)
+        
+        return request
+            .pendingPromise
+            .promise
+            .then(createPromise)
+    }
+    
     private func resumeQueue() {
         for request in requestsQueue {
             makeRequest(apiRequest: request)
@@ -122,10 +126,6 @@ public class MokejimaiApiClient {
         return Promise.value(object)
     }
     
-    private func createPromise(body: Any) -> Promise<Any> {
-        return Promise.value(body)
-    }
-    
     private func mapError(body: Any?) -> PSMokejimaiApiError {
         if let apiError = Mapper<PSMokejimaiApiError>().map(JSONObject: body) {
             return apiError
@@ -134,10 +134,9 @@ public class MokejimaiApiClient {
         return PSMokejimaiApiError.unknown()
     }
     
-    private func createRequest(_ endpoint: MokejimaiApiRequestRouter) -> MokejimaiApiRequest {
-        return MokejimaiApiRequest(
-            pendingPromise: Promise<Any>.pending(),
-            requestEndPoint: endpoint
-        )
+    private func createRequest<T: ApiRequest, R: URLRequestConvertible>(_ endpoint: R) -> T {
+        
+        return T.init(pendingPromise: Promise<Any>.pending(),
+                      requestEndPoint: endpoint)
     }
 }
