@@ -11,10 +11,10 @@ class MokejimaiRequestAdapter: RequestAdapter {
     
     public func adapt(_ urlRequest: URLRequest) throws -> URLRequest {
         var urlRequest = urlRequest
-
         urlRequest.setValue("Bearer " + (mokejimaiApiCredentials.token?.string ?? ""), forHTTPHeaderField: "Authorization")
-        urlRequest.setValue(mokejimaiApiCredentials.appLocale, forHTTPHeaderField: "Accept-Language")
-
+        if let appLocale = mokejimaiApiCredentials.appLocale {
+            urlRequest.setValue(appLocale, forHTTPHeaderField: "Accept-Language")
+        }
         return urlRequest
     }
 }
