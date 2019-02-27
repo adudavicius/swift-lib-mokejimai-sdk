@@ -15,7 +15,7 @@ public enum MokejimaiApiRequestRouter: URLRequestConvertible {
     
     private var method: HTTPMethod {
         switch self {
-        case .getManualTransferConfiguration( _):
+        case .getManualTransferConfiguration():
             return .get
         }
     }
@@ -30,8 +30,6 @@ public enum MokejimaiApiRequestRouter: URLRequestConvertible {
     
     private var parameters: Parameters? {
         switch self {
-
-            
         default:
             return nil
         }

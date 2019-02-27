@@ -3,11 +3,9 @@ import JWTDecode
 
 public class MokejimaiApiCredentials {
     public var token: JWT?
-    public var appLocale: String
     
-    public init(token: JWT? = nil, appLocale: String) {
+    public init(token: JWT? = nil) {
         self.token = token
-        self.appLocale = appLocale
     }
     
     public func isExpired() -> Bool {

@@ -20,12 +20,12 @@
 		1CC6307A221C17080092AF33 /* PSMetadata.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CC63079221C17080092AF33 /* PSMetadata.swift */; };
 		1CC6307D221C17580092AF33 /* PSManualTransfer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CC6307C221C17580092AF33 /* PSManualTransfer.swift */; };
 		1CC6307F221C17940092AF33 /* PSMoney.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CC6307E221C17940092AF33 /* PSMoney.swift */; };
+		1CCA67522225889400F2C377 /* MokejimaiRequestHeaders.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CCA67512225889400F2C377 /* MokejimaiRequestHeaders.swift */; };
 		1CF95740221D6F38007DE4AA /* Cartfile.resolved in Resources */ = {isa = PBXBuildFile; fileRef = 1CF9573E221D6F38007DE4AA /* Cartfile.resolved */; };
 		1CF95741221D6F38007DE4AA /* Cartfile in Resources */ = {isa = PBXBuildFile; fileRef = 1CF9573F221D6F38007DE4AA /* Cartfile */; };
 		1CF95742221D6F4D007DE4AA /* PayserMokejimaiSDKInfo.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1CC6303B221C11230092AF33 /* PayserMokejimaiSDKInfo.plist */; };
 		1CF95743221D6F4D007DE4AA /* PayseraMokejimaiSDKTests.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1CC63047221C11230092AF33 /* PayseraMokejimaiSDKTests.plist */; };
 		1CF95745221D74A0007DE4AA /* MokejimaiApiRequestRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CF95744221D74A0007DE4AA /* MokejimaiApiRequestRouter.swift */; };
-		1CF95752221D94CB007DE4AA /* CommonCrypto.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CF95751221D94CB007DE4AA /* CommonCrypto.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,10 +60,10 @@
 		1CC63079221C17080092AF33 /* PSMetadata.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PSMetadata.swift; sourceTree = "<group>"; };
 		1CC6307C221C17580092AF33 /* PSManualTransfer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PSManualTransfer.swift; sourceTree = "<group>"; };
 		1CC6307E221C17940092AF33 /* PSMoney.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PSMoney.swift; sourceTree = "<group>"; };
+		1CCA67512225889400F2C377 /* MokejimaiRequestHeaders.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MokejimaiRequestHeaders.swift; sourceTree = "<group>"; };
 		1CF9573E221D6F38007DE4AA /* Cartfile.resolved */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Cartfile.resolved; sourceTree = "<group>"; };
 		1CF9573F221D6F38007DE4AA /* Cartfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Cartfile; sourceTree = "<group>"; };
 		1CF95744221D74A0007DE4AA /* MokejimaiApiRequestRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MokejimaiApiRequestRouter.swift; sourceTree = "<group>"; };
-		1CF95751221D94CB007DE4AA /* CommonCrypto.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CommonCrypto.framework; path = Carthage/Build/iOS/CommonCrypto.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,7 +71,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1CF95752221D94CB007DE4AA /* CommonCrypto.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -152,7 +151,6 @@
 		1CC63069221C11BC0092AF33 /* Carthage */ = {
 			isa = PBXGroup;
 			children = (
-				1CF95751221D94CB007DE4AA /* CommonCrypto.framework */,
 				1CC6306C221C11D20092AF33 /* Alamofire.framework */,
 				1CC6306A221C11D20092AF33 /* JWTDecode.framework */,
 				1CC6306B221C11D20092AF33 /* ObjectMapper.framework */,
@@ -169,6 +167,7 @@
 				1CC63076221C16D20092AF33 /* PSMetadataAwareResponse.swift */,
 				1CC63079221C17080092AF33 /* PSMetadata.swift */,
 				1CC6307E221C17940092AF33 /* PSMoney.swift */,
+				1CCA67512225889400F2C377 /* MokejimaiRequestHeaders.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -302,7 +301,6 @@
 				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/ObjectMapper.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/PromiseKit.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/CommonCrypto.framework",
 			);
 			name = "Copy frameworks";
 			outputFileListPaths = (
@@ -325,6 +323,7 @@
 				1CC63077221C16D20092AF33 /* PSMetadataAwareResponse.swift in Sources */,
 				1CC63075221C14BD0092AF33 /* PSMokejimaiApiError.swift in Sources */,
 				1CC6307F221C17940092AF33 /* PSMoney.swift in Sources */,
+				1CCA67522225889400F2C377 /* MokejimaiRequestHeaders.swift in Sources */,
 				1CC63066221C11880092AF33 /* MokejimaiApiCredentials.swift in Sources */,
 				1CC63063221C11880092AF33 /* MokejimaiRequestAdapter.swift in Sources */,
 				1CC6307A221C17080092AF33 /* PSMetadata.swift in Sources */,
