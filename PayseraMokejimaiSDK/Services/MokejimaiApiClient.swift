@@ -20,8 +20,7 @@ public class MokejimaiApiClient {
         self.credentials = credentials
     }
     
-    public func getManualTransferConfiguration(locale: String) -> Promise<PSMetadataAwareResponse<PSManualTransfer>> {
-        credentials.appLocale = locale
+    public func getManualTransferConfiguration() -> Promise<PSMetadataAwareResponse<PSManualTransfer>> {
         return doRequest(requestRouter: MokejimaiApiRequestRouter.getManualTransferConfiguration())
     }
     
