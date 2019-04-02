@@ -37,15 +37,18 @@ class PayseraMokejimaiSDKTests: XCTestCase {
 
     func testGetManualTransferConfiguration() {
         
-        var transferConfigurations: [PSManualTransfer]?
+        var transferConfigurations: [PSManualTransferConfiguration]?
         let expectation = XCTestExpectation(description: "Manual Transfer Configuration should be not nil")
         let expectation2 = XCTestExpectation(description: "Manual Transfer Configuration should be not nil")
         
         let mokejimaiRequestHeaders = createMokejimaiRequestHeaders()
         let mokejimaiApiClient = createMokejimaiApiClient(mokejimaiRequestHeaders: mokejimaiRequestHeaders)
         
+        let filter = BaseFilter()
+        filter.limit = 200
+        filter.offset = 5
         
-        mokejimaiApiClient.getManualTransferConfiguration().done { awareResponse in
+        mokejimaiApiClient.getManualTransferConfiguration(filter: filter).done { awareResponse in
             transferConfigurations = awareResponse.items
             if let items = transferConfigurations {
                 items.forEach { print( $0.transferExecutionTime )}
@@ -58,7 +61,7 @@ class PayseraMokejimaiSDKTests: XCTestCase {
         
         
         mokejimaiRequestHeaders.updateHeader(.acceptLanguage("lv"))
-        mokejimaiApiClient.getManualTransferConfiguration().done { awareResponse in
+        mokejimaiApiClient.getManualTransferConfiguration(filter: filter).done { awareResponse in
             transferConfigurations = awareResponse.items
             if let items = transferConfigurations {
                 items.forEach { print( $0.transferExecutionTime )}

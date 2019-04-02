@@ -20,8 +20,8 @@ public class MokejimaiApiClient {
         self.credentials = credentials
     }
     
-    public func getManualTransferConfiguration() -> Promise<PSMetadataAwareResponse<PSManualTransfer>> {
-        return doRequest(requestRouter: MokejimaiApiRequestRouter.getManualTransferConfiguration())
+    public func getManualTransferConfiguration(filter: BaseFilter) -> Promise<PSMetadataAwareResponse<PSManualTransferConfiguration>> {
+        return doRequest(requestRouter: MokejimaiApiRequestRouter.getManualTransferConfiguration(filter: filter))
     }
     
     // MARK: - Private request methods

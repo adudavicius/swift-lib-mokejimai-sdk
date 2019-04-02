@@ -4,7 +4,7 @@ import Alamofire
 public enum MokejimaiApiRequestRouter: URLRequestConvertible {
     
     // MARK: - GET
-    case getManualTransferConfiguration()
+    case getManualTransferConfiguration(filter: BaseFilter)
     
     // MARK: - POST
     
@@ -15,7 +15,7 @@ public enum MokejimaiApiRequestRouter: URLRequestConvertible {
     
     private var method: HTTPMethod {
         switch self {
-        case .getManualTransferConfiguration():
+        case .getManualTransferConfiguration(_):
             return .get
         }
     }
@@ -23,13 +23,16 @@ public enum MokejimaiApiRequestRouter: URLRequestConvertible {
     private var path: String {
         switch self {
             
-        case .getManualTransferConfiguration():
+        case .getManualTransferConfiguration(_):
             return "/manual-transfer-configuration/rest/v1/configurations"
         }
     }
     
     private var parameters: Parameters? {
         switch self {
+        case .getManualTransferConfiguration(let filter):
+            return filter.toJSON()
+            
         default:
             return nil
         }

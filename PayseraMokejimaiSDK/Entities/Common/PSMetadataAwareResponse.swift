@@ -8,7 +8,7 @@ public class PSMetadataAwareResponse<T: Mappable>: Mappable  {
     private var itemsResponseKey: String {
         
         switch T.self {
-        case ( _) where T.self == PSManualTransfer.self:
+        case ( _) where T.self == PSManualTransferConfiguration.self:
             return "items"
             
         default:

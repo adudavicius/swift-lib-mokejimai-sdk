@@ -1,6 +1,6 @@
 import ObjectMapper
 
-public class PSManualTransfer: Mappable {
+public class PSManualTransferConfiguration: Mappable {
     
     public let fromBankKey: String
     public let toBankKey: String
